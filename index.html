@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quizo Tech</title>
+  <!-- BootStrap -->
+  <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js">
+  <!-- Css -->
+  <link rel="stylesheet" href="asset/style.css">
+</head>
+<body>
+  <div class="container-fluid d-flex justify-content-center align-items-center">
+    <div class="col-lg-5 bg-light border rounded border-3 border-warning p-3">
+      <div class="details row mb-2">
+        <span class="col fs-4 fw-bold fst-italic">Quizo Tech Gaming</span>
+        <div class="Result col-2">
+          Total Score:
+          <p class=" border border-3 border-danger text-center m-0" id="score-box">0</p>
+        </div>
+      </div>
+      <div class="questions col">
+        <div class="question-one" id="question-box">
+          <p class="fs-5"><b>1.</b> Which of the following is not a living organism:</p>
+          <div class="option d-flex column-gap-3 text-white">
+            <div class="role-one col d-flex justify-content-center flex-column row-gap-3 ">
+              <div class="form-check">
+                <input onclick="get_option(1)" class="form-check-input" checked type="radio" name="flexRadioDefault" id="0">
+                <label class="col-12 bg-primary py-1 px-2 rounded " for="">Rat</label>
+              </div>
+              <div class="form-check">
+                <input onclick="get_option(2)" class="form-check-input" type="radio" name="flexRadioDefault" id="1">
+                <label class="col-12 bg-success py-1 px-2 rounded " for="">Snake</label>
+              </div>
+            </div>
+            <div class="col role-two d-flex flex-column row-gap-3">
+              <div class="form-check">
+                <input onclick="get_option(3)" class="form-check-input" type="radio" name="flexRadioDefault" id="2">
+                <label class="col-12 bg-warning py-1 px-2 rounded" for="">Ant</label>
+              </div>
+              <div class="form-check">
+                <input onclick="get_option(4)" class="form-check-input" type="radio" name="flexRadioDefault" id="crt">
+                <label class="col-12 bg-danger py-1 px-2 rounded" for="">Table</label>
+              </div>
+            </div>
+          </div>
+          <p id="answer" class="mt-2"></p>
+          <div class="text-end pe-2">
+            <button class="btn btn-primary" onclick="get_submit()">Submit</button>
+          </div>
+        </div>
+      </div>       
+    </div>
+  </div>
+  <!-- Js -->
+  <script src="asset/quiz.js"></script>
+</body>
+</html>
